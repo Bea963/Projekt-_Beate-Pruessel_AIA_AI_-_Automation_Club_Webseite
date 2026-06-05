@@ -76,3 +76,11 @@ Ihre Nutzung ist ausschließlich unter den Bedingungen der ursprünglichen Autor
 ## Kontakt:
 Beate Prüssel  
 GitHub: https://github.com/Bea963
+
+
+## Visuelle Elemente
+
+### Diagramme
+![Cloud](cloud.png)
+![Github](github.png)
+![Workflow](Gemini_Generated_Image_76vrci76vrci76vr.png)
