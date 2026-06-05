@@ -4,7 +4,8 @@
 README.md
 Projektübersicht:
 
-Die AIA – AI & Automation Club Webseite ist eine moderne, statische Webpräsenz, die den Club, seine Ziele und Kontaktmöglichkeiten vorstellt.
+Die AIA – AI & Automation Club Webseite ist eine moderne, statische Webpräsenz. Sie präsentiert Ziele, Projekte und Kontaktmöglichkeiten. 
+
 Das Projekt wurde mit HTML, CSS und JavaScript umgesetzt und über GitHub Pages veröffentlicht.
 Der Fokus liegt auf einer klaren Struktur, guter Lesbarkeit und responsivem Design.
 
