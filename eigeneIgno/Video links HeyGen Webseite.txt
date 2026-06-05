@@ -1,0 +1,11 @@
+Video-links HeyGen Webseite AIA-Club
+
+https://app.heygen.com/video-agent/002fd98ae4e74c54965444b518d54c8a
+
+
+https://app.heygen.com/videos/die-zukunft-der-effizienz-cloud-security-a7b35779e0cf449f9cea170bc7f82452
+
+
+
+<iframe width="560" height="315" src="https://app.heygen.com/embeds/a7b35779e0cf449f9cea170bc7f82452" title="HeyGen video player" frameborder="0" allow="encrypted-media; fullscreen;" allowfullscreen></iframe>
+
