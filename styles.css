@@ -35,24 +35,43 @@
     transform: scale(1.05);
 }
 .bolt-rtl {
-    animation: slideRTL 6s linear infinite;
+    animation: slideRTL 10s linear infinite;
+}
+.bolt-rtl::after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 220px;
+    height: 30px;
+    background: radial-gradient(ellipse at left, #818cf888 0%, #818cf844 30%, transparent 70%);
+    filter: blur(6px);
+    opacity: 0.5;
+    pointer-events: none;
 }
 .bolt-ltr {
-    animation: slideLTR 6s linear infinite;
+    animation: slideLTR 10s linear infinite;
+}
+.bolt-ltr::after {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 220px;
+    height: 30px;
+    background: radial-gradient(ellipse at right, #818cf888 0%, #818cf844 30%, transparent 70%);
+    filter: blur(6px);
+    opacity: 0.5;
+    pointer-events: none;
 }
 .plasma-orb {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: #818cf8;
+    width: 0;
+    height: 0;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    box-shadow:
-        0 0 6px #818cf8,
-        0 0 12px #818cf8,
-        0 0 24px #818cf888,
-        0 0 40px #818cf844;
 }
 @keyframes slideRTL {
     0%   { left: 100%; }
@@ -61,6 +80,214 @@
 @keyframes slideLTR {
     0%   { left: -2rem; }
     100% { left: 100%; }
+}
+.neon-lightning {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+.neon-lightning div {
+    position: absolute;
+    opacity: 0;
+    filter: blur(1px);
+}
+.neon-lightning .bolt1 {
+    top: 8%;
+    left: 5%;
+    width: 6px;
+    height: 85%;
+    background: linear-gradient(to bottom, #818cf8, #818cf8cc 20%, transparent 80%);
+    box-shadow: 0 0 10px #818cf8, 0 0 25px #818cf888;
+    clip-path: polygon(50% 0%, 100% 15%, 60% 25%, 100% 40%, 40% 55%, 80% 70%, 30% 85%, 0% 100%, 0% 85%, 20% 70%, 0% 55%, 30% 40%, 0% 25%, 40% 15%);
+    animation: bolt1 6s ease-in-out infinite;
+}
+.neon-lightning .bolt1::before {
+    content: ''; position: absolute; top: 20%; left: 100%; width: 5px; height: 50%;
+    background: linear-gradient(to bottom, #818cf8cc, #818cf888 30%, transparent 80%);
+    clip-path: polygon(50% 0%, 100% 12%, 60% 25%, 100% 38%, 45% 52%, 85% 65%, 25% 78%, 0% 100%, 0% 78%, 18% 65%, 0% 52%, 28% 38%, 0% 25%, 38% 12%);
+    filter: blur(1px);
+    animation: branch1 6s ease-in-out infinite;
+}
+.neon-lightning .bolt1::after {
+    content: ''; position: absolute; top: 55%; right: 80%; width: 4px; height: 40%;
+    background: linear-gradient(to bottom, #818cf8cc, #818cf866 25%, transparent 75%);
+    clip-path: polygon(50% 0%, 100% 15%, 55% 30%, 100% 45%, 40% 58%, 85% 72%, 22% 85%, 0% 100%, 0% 85%, 18% 72%, 0% 58%, 28% 45%, 0% 30%, 40% 15%);
+    filter: blur(1px);
+    animation: branch1 6s ease-in-out infinite;
+}
+.neon-lightning .bolt2 {
+    top: 3%;
+    left: 23%;
+    width: 5px;
+    height: 70%;
+    background: linear-gradient(to bottom, #818cf8, #818cf8aa 15%, transparent 70%);
+    box-shadow: 0 0 8px #818cf8, 0 0 20px #818cf866;
+    clip-path: polygon(50% 0%, 100% 10%, 40% 20%, 100% 35%, 30% 50%, 80% 65%, 20% 80%, 0% 100%, 0% 80%, 20% 65%, 0% 50%, 30% 35%, 0% 20%, 50% 10%);
+    animation: bolt2 6s ease-in-out infinite;
+}
+.neon-lightning .bolt2::before {
+    content: ''; position: absolute; top: 28%; left: 100%; width: 4px; height: 45%;
+    background: linear-gradient(to bottom, #818cf8cc, #818cf888 30%, transparent 75%);
+    clip-path: polygon(50% 0%, 100% 14%, 55% 28%, 100% 42%, 40% 55%, 85% 68%, 25% 82%, 0% 100%, 0% 82%, 18% 68%, 0% 55%, 28% 42%, 0% 28%, 40% 14%);
+    filter: blur(1px);
+    animation: branch2 6s ease-in-out infinite;
+}
+.neon-lightning .bolt2::after {
+    content: ''; position: absolute; top: 58%; right: 80%; width: 4px; height: 35%;
+    background: linear-gradient(to bottom, #818cf8cc, #818cf866 25%, transparent 75%);
+    clip-path: polygon(50% 0%, 100% 18%, 50% 35%, 100% 50%, 38% 62%, 85% 75%, 20% 88%, 0% 100%, 0% 88%, 15% 75%, 0% 62%, 25% 50%, 0% 35%, 35% 18%);
+    filter: blur(1px);
+    animation: branch2 6s ease-in-out infinite;
+}
+.neon-lightning .bolt3 {
+    top: 12%;
+    left: 41%;
+    width: 5px;
+    height: 60%;
+    background: linear-gradient(to bottom, #818cf8, #818cf8aa 15%, transparent 70%);
+    box-shadow: 0 0 8px #818cf8, 0 0 20px #818cf866;
+    clip-path: polygon(50% 0%, 100% 12%, 45% 22%, 100% 38%, 35% 52%, 85% 68%, 25% 82%, 0% 100%, 0% 82%, 18% 68%, 0% 52%, 28% 38%, 0% 22%, 45% 12%);
+    animation: bolt5 6s ease-in-out infinite;
+}
+.neon-lightning .bolt3::before {
+    content: ''; position: absolute; top: 22%; left: 100%; width: 4px; height: 42%;
+    background: linear-gradient(to bottom, #818cf8cc, #818cf888 30%, transparent 75%);
+    clip-path: polygon(50% 0%, 100% 16%, 55% 30%, 100% 44%, 40% 56%, 85% 68%, 22% 82%, 0% 100%, 0% 82%, 18% 68%, 0% 56%, 28% 44%, 0% 30%, 38% 16%);
+    filter: blur(1px);
+    animation: branch5 6s ease-in-out infinite;
+}
+.neon-lightning .bolt3::after {
+    content: ''; position: absolute; top: 48%; right: 80%; width: 5px; height: 38%;
+    background: linear-gradient(to bottom, #818cf8cc, #818cf866 25%, transparent 75%);
+    clip-path: polygon(50% 0%, 100% 12%, 55% 28%, 100% 42%, 40% 55%, 85% 68%, 25% 82%, 0% 100%, 0% 82%, 18% 68%, 0% 55%, 28% 42%, 0% 28%, 40% 12%);
+    filter: blur(1px);
+    animation: branch5 6s ease-in-out infinite;
+}
+.neon-lightning .bolt4 {
+    top: 22%;
+    left: 59%;
+    width: 5px;
+    height: 55%;
+    background: linear-gradient(to bottom, #818cf8, #818cf8aa 15%, transparent 70%);
+    box-shadow: 0 0 8px #818cf8, 0 0 20px #818cf866;
+    clip-path: polygon(50% 0%, 100% 14%, 55% 28%, 100% 42%, 40% 56%, 90% 72%, 30% 86%, 0% 100%, 0% 86%, 22% 72%, 0% 56%, 32% 42%, 0% 28%, 48% 14%);
+    animation: bolt6 6s ease-in-out infinite;
+}
+.neon-lightning .bolt4::before {
+    content: ''; position: absolute; top: 30%; left: 100%; width: 4px; height: 38%;
+    background: linear-gradient(to bottom, #818cf8cc, #818cf888 30%, transparent 75%);
+    clip-path: polygon(50% 0%, 100% 15%, 55% 30%, 100% 44%, 40% 56%, 85% 68%, 22% 82%, 0% 100%, 0% 82%, 18% 68%, 0% 56%, 28% 44%, 0% 30%, 38% 15%);
+    filter: blur(1px);
+    animation: branch6 6s ease-in-out infinite;
+}
+.neon-lightning .bolt4::after {
+    content: ''; position: absolute; top: 55%; right: 80%; width: 4px; height: 32%;
+    background: linear-gradient(to bottom, #818cf8cc, #818cf866 25%, transparent 75%);
+    clip-path: polygon(50% 0%, 100% 18%, 50% 35%, 100% 50%, 38% 62%, 85% 75%, 20% 88%, 0% 100%, 0% 88%, 15% 75%, 0% 62%, 25% 50%, 0% 35%, 35% 18%);
+    filter: blur(1px);
+    animation: branch6 6s ease-in-out infinite;
+}
+.neon-lightning .bolt5 {
+    top: 6%;
+    left: 77%;
+    width: 4px;
+    height: 45%;
+    background: linear-gradient(to bottom, #818cf8, #818cf888 20%, transparent 70%);
+    box-shadow: 0 0 6px #818cf8, 0 0 16px #818cf866;
+    clip-path: polygon(50% 0%, 100% 18%, 40% 30%, 100% 48%, 30% 62%, 80% 78%, 20% 90%, 0% 100%, 0% 90%, 15% 78%, 0% 62%, 25% 48%, 0% 30%, 40% 18%);
+    animation: bolt2 6s ease-in-out infinite;
+}
+.neon-lightning .bolt5::before {
+    content: ''; position: absolute; top: 25%; left: 100%; width: 4px; height: 38%;
+    background: linear-gradient(to bottom, #818cf8cc, #818cf888 30%, transparent 75%);
+    clip-path: polygon(50% 0%, 100% 15%, 55% 30%, 100% 44%, 40% 56%, 85% 68%, 22% 82%, 0% 100%, 0% 82%, 18% 68%, 0% 56%, 28% 44%, 0% 30%, 38% 15%);
+    filter: blur(1px);
+    animation: branch2 6s ease-in-out infinite;
+}
+.neon-lightning .bolt5::after {
+    content: ''; position: absolute; top: 55%; right: 80%; width: 3px; height: 30%;
+    background: linear-gradient(to bottom, #818cf8cc, #818cf866 25%, transparent 75%);
+    clip-path: polygon(50% 0%, 100% 20%, 48% 38%, 100% 52%, 35% 65%, 85% 78%, 18% 90%, 0% 100%, 0% 90%, 15% 78%, 0% 65%, 22% 52%, 0% 38%, 32% 20%);
+    filter: blur(1px);
+    animation: branch2 6s ease-in-out infinite;
+}
+.neon-lightning .bolt6 {
+    top: 18%;
+    left: 92%;
+    width: 5px;
+    height: 65%;
+    background: linear-gradient(to bottom, #818cf8, #818cf8aa 15%, transparent 70%);
+    box-shadow: 0 0 8px #818cf8, 0 0 20px #818cf866;
+    clip-path: polygon(50% 0%, 100% 13%, 48% 25%, 100% 40%, 38% 54%, 88% 70%, 28% 84%, 0% 100%, 0% 84%, 20% 70%, 0% 54%, 30% 40%, 0% 25%, 42% 13%);
+    animation: bolt3 6s ease-in-out infinite;
+}
+.neon-lightning .bolt6::after {
+    content: ''; position: absolute; top: 38%; right: 80%; width: 4px; height: 38%;
+    background: linear-gradient(to bottom, #818cf8cc, #818cf866 25%, transparent 75%);
+    clip-path: polygon(50% 0%, 100% 12%, 55% 28%, 100% 42%, 40% 55%, 85% 68%, 25% 82%, 0% 100%, 0% 82%, 18% 68%, 0% 55%, 28% 42%, 0% 28%, 40% 12%);
+    filter: blur(1px);
+    animation: branch3 6s ease-in-out infinite;
+}
+@keyframes bolt1 {
+    0%, 1%, 10%, 80%, 87%, 100% { opacity: 0; }
+    2% { opacity: 0.9; } 3% { opacity: 0; }
+    81% { opacity: 0.9; } 82% { opacity: 0.3; } 83% { opacity: 0.8; } 84% { opacity: 0.4; } 86% { opacity: 0; }
+}
+@keyframes bolt2 {
+    0%, 13%, 21%, 80%, 87%, 100% { opacity: 0; }
+    14% { opacity: 0.9; } 15% { opacity: 0; }
+    81% { opacity: 0.9; } 82% { opacity: 0.3; } 83% { opacity: 0.8; } 84% { opacity: 0.4; } 86% { opacity: 0; }
+}
+@keyframes bolt3 {
+    0%, 25%, 33%, 80%, 87%, 100% { opacity: 0; }
+    26% { opacity: 0.9; } 27% { opacity: 0; }
+    81% { opacity: 0.9; } 82% { opacity: 0.3; } 83% { opacity: 0.8; } 84% { opacity: 0.4; } 86% { opacity: 0; }
+}
+@keyframes bolt4 {
+    0%, 37%, 45%, 80%, 87%, 100% { opacity: 0; }
+    38% { opacity: 0.9; } 39% { opacity: 0; }
+    81% { opacity: 0.9; } 82% { opacity: 0.3; } 83% { opacity: 0.8; } 84% { opacity: 0.4; } 86% { opacity: 0; }
+}
+@keyframes bolt5 {
+    0%, 49%, 57%, 80%, 87%, 100% { opacity: 0; }
+    50% { opacity: 0.9; } 51% { opacity: 0; }
+    81% { opacity: 0.9; } 82% { opacity: 0.3; } 83% { opacity: 0.8; } 84% { opacity: 0.4; } 86% { opacity: 0; }
+}
+@keyframes bolt6 {
+    0%, 61%, 69%, 80%, 87%, 100% { opacity: 0; }
+    62% { opacity: 0.9; } 63% { opacity: 0; }
+    81% { opacity: 0.9; } 82% { opacity: 0.3; } 83% { opacity: 0.8; } 84% { opacity: 0.4; } 86% { opacity: 0; }
+}
+@keyframes branch1 {
+    0%, 1%, 10%, 80%, 87%, 100% { opacity: 0; }
+    2% { opacity: 0.6; } 3% { opacity: 0; }
+    81% { opacity: 0.6; } 82% { opacity: 0.2; } 83% { opacity: 0.5; } 85% { opacity: 0; }
+}
+@keyframes branch2 {
+    0%, 13%, 21%, 80%, 87%, 100% { opacity: 0; }
+    14% { opacity: 0.6; } 15% { opacity: 0; }
+    81% { opacity: 0.6; } 82% { opacity: 0.2; } 83% { opacity: 0.5; } 85% { opacity: 0; }
+}
+@keyframes branch3 {
+    0%, 25%, 33%, 80%, 87%, 100% { opacity: 0; }
+    26% { opacity: 0.6; } 27% { opacity: 0; }
+    81% { opacity: 0.6; } 82% { opacity: 0.2; } 83% { opacity: 0.5; } 85% { opacity: 0; }
+}
+@keyframes branch4 {
+    0%, 37%, 45%, 80%, 87%, 100% { opacity: 0; }
+    38% { opacity: 0.6; } 39% { opacity: 0; }
+    81% { opacity: 0.6; } 82% { opacity: 0.2; } 83% { opacity: 0.5; } 85% { opacity: 0; }
+}
+@keyframes branch5 {
+    0%, 49%, 57%, 80%, 87%, 100% { opacity: 0; }
+    50% { opacity: 0.6; } 51% { opacity: 0; }
+    81% { opacity: 0.6; } 82% { opacity: 0.2; } 83% { opacity: 0.5; } 85% { opacity: 0; }
+}
+@keyframes branch6 {
+    0%, 61%, 69%, 80%, 87%, 100% { opacity: 0; }
+    62% { opacity: 0.6; } 63% { opacity: 0; }
+    81% { opacity: 0.6; } 82% { opacity: 0.2; } 83% { opacity: 0.5; } 85% { opacity: 0; }
 }
 .kontakt-border {
     position: relative;
